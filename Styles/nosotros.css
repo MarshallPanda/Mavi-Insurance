@@ -247,3 +247,109 @@ body {
   font-size: 13px;
   color: #888;
 }
+
+
+/*Style de mision y vision*/
+
+.mision-vision {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.bloque-mision,
+.bloque-vision {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+.bloque-mision .imagen,
+.bloque-vision .imagen {
+  flex: 1 1 40%;
+  max-width: 40%;
+}
+
+.bloque-mision .texto,
+.bloque-vision .texto {
+  flex: 1 1 60%;
+  max-width: 60%;
+}
+
+.bloque-mision .imagen img,
+.bloque-vision .imagen img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.texto h2 {
+  margin-bottom: 1rem;
+  color: #2b2b2b;
+}
+
+.texto p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.nosotros {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.nosotros .etiqueta-vertical {
+  color: #999;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+
+.bloque-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 5%;
+  flex-wrap: wrap;
+  margin-bottom: 1rem 5%; /* separa los bloques */
+}
+
+.bloque-info.reverso {
+  flex-direction: row-reverse;
+}
+
+.imagen-lado,
+.texto-lado {
+  flex: 1 1 45%;
+}
+
+.imagen-lado img {
+  width: 100%; /* o un tamaño fijo como 400px */
+  max-width: 500px;
+  height: auto; /* o height: 300px; si deseas altura fija */
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.texto-lado .etiqueta-vertical {
+  color: #d27fa3;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.texto-lado h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.texto-lado p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
