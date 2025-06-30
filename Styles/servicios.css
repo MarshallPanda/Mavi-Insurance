@@ -247,3 +247,125 @@ body {
   font-size: 13px;
   color: #888;
 }
+
+
+/* servicios*/
+
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px; /* controla el ancho total del grid */
+  margin: 0 auto; /* centra horizontalmente */
+  padding: 40px 20px;
+  background-color: #fff5f8;
+  justify-items: center;
+}
+
+
+.service-card img {
+  width: 60px;     /* Tamaño controlado */
+  height: auto;    /* Mantiene proporción */
+  display: block;
+  margin: 0 60px 10px 60px; /* Centrado y espaciado inferior */
+}
+
+.servicio-box h3 {
+  color: #f573a0;
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.servicio-box p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+/*Espacios para titulo, descripcion y boton*/
+
+.service-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  width: 330px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(255, 192, 203, 0.3);
+  transition: transform 0.3s;
+
+  /* Agregado para igualar alturas y empujar contenido hacia abajo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%; /* se adapta si está en un grid con igual altura */
+}
+
+
+/*Btn*/
+.btn-consultar {
+  background-color: #f573a0;
+  color: white;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.btn-consultar:hover {
+  background-color: #e04578;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 25px;
+  width: 330px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(255, 192, 203, 0.3);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 240px;      /* Tamaño controlado */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+
+.service-card h3 {
+  color: #f2619c;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.service-card button {
+  background-color: #f2619c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 25px;
+  font-weight: bold;
+  cursor: pointer;
+}

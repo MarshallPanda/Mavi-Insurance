@@ -1,4 +1,6 @@
-/* Variables de tema */
+/* ==============================
+   VARIABLES DE TEMA
+============================== */
 :root {
   --color-bg: #fefefe;
   --color-navbar-top-bg: #f4a5bb;
@@ -11,7 +13,9 @@
   --color-shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* General */
+/* ==============================
+   ESTILOS GENERALES
+============================== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -19,7 +23,9 @@ body {
   background-color: var(--color-bg);
 }
 
-/* Barra superior */
+/* ==============================
+   BARRA SUPERIOR
+============================== */
 .navbar-top {
   background-color: var(--color-navbar-top-bg);
   color: var(--color-navbar-top-text);
@@ -52,7 +58,9 @@ body {
   margin-left: 10px;
 }
 
-/* Barra inferior */
+/* ==============================
+   BARRA INFERIOR
+============================== */
 .navbar-bottom {
   background-color: var(--color-navbar-bottom-bg);
   margin: -25px auto 0 auto;
@@ -86,7 +94,6 @@ body {
   color: var(--color-navbar-bottom-hover);
 }
 
-/* Marca */
 .brand {
   font-size: 28px;
   font-weight: bold;
@@ -102,7 +109,9 @@ body {
   text-transform: none;
 }
 
-/* Responsivo */
+/* ==============================
+   RESPONSIVO
+============================== */
 @media (max-width: 768px) {
   .navbar-bottom {
     flex-direction: column;
@@ -125,7 +134,9 @@ body {
   }
 }
 
-/* Estilos footer o pie de pagina */
+/* ==============================
+   FOOTER
+============================== */
 .footer-clean {
   background-color: #ffffff;
   padding: 60px 20px;
@@ -248,16 +259,9 @@ body {
   color: #888;
 }
 
-
-
-
-
-
-
-
-
-
-
+/* ==============================
+   ASESORES
+============================== */
 .equipo {
   display: flex;
   justify-content: center;
@@ -269,6 +273,7 @@ body {
 
 .asesor {
   text-align: center;
+  cursor: pointer;
   transition: transform 0.3s ease;
 }
 
@@ -307,84 +312,157 @@ body {
   margin: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.modal {
+/* ==============================
+   MODAL RECTANGULAR
+============================== */
+.modal-rectangular {
   display: none;
   position: fixed;
   z-index: 9999;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   justify-content: center;
   align-items: center;
+}
+
+.modal-contenido-rectangular {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
   text-align: center;
-}
-
-.modal-contenido-circular {
   position: relative;
-  width: 300px;
-  height: 300px;
-  margin: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.imagen-circular {
+.modal-contenido-rectangular img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  border-radius: 8px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 5px solid #f48ca3;
+}
+
+.descripcion-modal {
+  margin-top: 15px;
+}
+
+.descripcion-modal h3 {
+  margin: 0;
+  color: #f48ca3;
+}
+
+.descripcion-modal p {
+  margin: 5px 0 0;
+  color: #444;
 }
 
 .cerrar {
   position: absolute;
-  top: 20px;
-  right: 40px;
-  font-size: 40px;
-  color: white;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  color: #333;
   cursor: pointer;
 }
 
-.texto-arriba,
-.texto-abajo,
-.texto-izquierda,
-.texto-derecha {
-  position: absolute;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-.texto-arriba {
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+/* seccion de texto persuasivo */
+
+.mensaje-persuasivo {
+  background: #fff0f6;
+  border: 2px solid #ffc0d9;
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 850px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
-.texto-abajo {
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
+
+.mensaje-persuasivo:hover {
+  transform: scale(1.02);
 }
-.texto-izquierda {
-  top: 50%;
-  left: -80px;
-  transform: translateY(-50%);
+
+.mensaje-persuasivo h2 {
+  color: #ff69b4;
+  font-size: 26px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
-.texto-derecha {
-  top: 50%;
-  right: -80px;
-  transform: translateY(-50%);
+
+.mensaje-persuasivo p {
+  color: #444;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.boton-agendar {
+  display: inline-block;
+  background-color: #ff69b4;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.boton-agendar:hover {
+  background-color: #e0559d;
+}
+
+
+/*Seccion titulo asesores*/
+.titulo-asesores {
+  text-align: center;
+  font-size: 32px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #ff69b4;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+.titulo-asesores-decorado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px auto 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.titulo-asesores-decorado h2 {
+  color: #ff69b4;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.08);
+}
+
+.linea-decorativa {
+  height: 3px;
+  width: 50px;
+  background-color: #ff69b4;
+  border-radius: 2px;
 }

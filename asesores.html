@@ -9,17 +9,6 @@
   <link rel="shortcut icon" href="ImgSistema/faviicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<script>
-  function abrirModal(imagenSrc) {
-    document.getElementById("imagenModal").style.display = "block";
-    document.getElementById("imagenAmpliada").src = imagenSrc;
-  }
-
-  function cerrarModal() {
-    document.getElementById("imagenModal").style.display = "none";
-  }
-</script>
-
 
 <body>
 
@@ -38,6 +27,7 @@
       <a href="#"><i class="fab fa-youtube"></i></a>
     </div>
   </nav>
+
   <!-- Barra inferior -->
   <nav class="navbar-bottom">
     <ul class="nav-left">
@@ -52,47 +42,71 @@
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
+  <!-- Sección de titulo asesores -->
+  <div class="titulo-asesores-decorado">
+    <div class="linea-decorativa"></div>
+    <h2>Nuestro equipo</h2>
+    <div class="linea-decorativa"></div>
+  </div>
 
 
-  <!-- Conteido -->
+  <!-- Sección de asesores -->
   <section class="equipo">
-    <div class="asesor" onclick="abrirModal('imagenes/imgNs.png')">
+    <div class="asesor"
+      onclick="abrirModal('imagenes/imgNs.png', 'Maria William', 'Especialista en seguros de salud y vida.')">
       <div class="imagen-asesor">
-        <img src="imagenes/imgNs.png" alt="Alma">
+        <img src="imagenes/imgNs.png" alt="Maria William">
       </div>
       <h3>Maria William</h3>
       <p>Product Manager</p>
     </div>
-    <div class="asesor" onclick="abrirModal('imagenes/imgNs.png')">
+
+    <div class="asesor"
+      onclick="abrirModal('imagenes/imgNs.png', 'Vicente', 'Experto en seguros. Responsable del soporte digital al cliente.')">
       <div class="imagen-asesor">
-        <img src="imagenes/imgNs.png" alt="Irma">
+        <img src="imagenes/imgNs.png" alt="Vicente">
       </div>
       <h3>Vicente</h3>
       <p>Senior Developer</p>
     </div>
   </section>
 
-  <!-- Modal para ampliar imagen -->
-  <!-- Modal con texto en los 4 costados -->
-  <div id="imagenModal" class="modal">
-    <span class="cerrar" onclick="cerrarModal()">&times;</span>
-    <div class="modal-contenido-circular">
-      <span class="texto-arriba">Innovación</span>
-      <span class="texto-abajo">Compromiso</span>
-      <span class="texto-izquierda">Experiencia</span>
-      <span class="texto-derecha">Calidez</span>
-      <img class="imagen-circular" id="imagenAmpliada" alt="asesor ampliado">
+  <!-- Modal rectangular con foto y descripción -->
+  <div id="imagenModal" class="modal-rectangular">
+    <div class="modal-contenido-rectangular">
+      <span class="cerrar" onclick="cerrarModal()">&times;</span>
+      <img id="imagenAmpliada" alt="asesor ampliado">
+      <div class="descripcion-modal">
+        <h3 id="nombreAsesor">Nombre del Asesor</h3>
+        <p id="cargoAsesor">Descripción del asesor</p>
+      </div>
     </div>
   </div>
 
+  <section class="mensaje-persuasivo">
+    <h2 style="text-align: center; color: #ff69b4; margin-top: 40px;">
+      Confianza, compromiso y atención personalizada
+    </h2>
+    <p style="text-align: center; max-width: 800px; margin: 20px auto; font-size: 18px; color: #444;">
+      En Mavi Insurance creemos que cada persona merece sentirse protegida y respaldada. Por eso, nuestros asesores
+      están capacitados no solo para ayudarte a elegir el mejor seguro, sino para acompañarte en cada paso del camino.
+    </p>
+    <p style="text-align: center; max-width: 800px; margin: 20px auto; font-size: 18px; color: #444;">
+      Ya sea salud, vida o protección familiar, estamos aquí para brindarte respuestas claras, procesos ágiles y una
+      atención cálida que te inspire confianza. ¡No estás sol@, estás con Mavi!
+    </p>
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="contacto.html"
+        style="background-color: #ff69b4; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold;">
+        Agenda tu asesoría ahora
+      </a>
+    </div>
+  </section>
 
 
-
-
-  <!-- Sección de footer-->
+  <!-- Footer -->
   <footer class="footer-clean">
     <div class="footer-content">
-
       <h2 class="footer-logo">Mavi <span>Insurance</span></h2>
 
       <div class="footer-social">
@@ -133,10 +147,22 @@
       <p class="footer-copy">© Mavi Insurance. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <!-- Scripts -->
   <script src="Script/ScriptAsesores.js"></script>
+  <script>
+    function abrirModal(imagenSrc, nombre, descripcion) {
+      const modal = document.getElementById("imagenModal");
+      document.getElementById("imagenAmpliada").src = imagenSrc;
+      document.getElementById("nombreAsesor").textContent = nombre;
+      document.getElementById("cargoAsesor").textContent = descripcion;
+      modal.style.display = "flex";
+    }
 
-
-
+    function cerrarModal() {
+      document.getElementById("imagenModal").style.display = "none";
+    }
+  </script>
 
 </body>
 
