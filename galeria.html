@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mavi Gallery</title>
   <link rel="stylesheet" href="Styles/galeria.css" />
   <link rel="shortcut icon" href="ImgSistema/faviicon.png" type="image/x-icon">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
 
   <!-- Barra superior -->
@@ -30,7 +29,7 @@
   </nav>
 
   <!-- Sección de -->
- 
+
 
 
   <!-- Barra inferior -->
@@ -49,65 +48,120 @@
   </nav>
 
 
-<!--Contacto-->
- 
-
-
-
-
-
-
-
-
-
-
-<!-- Sección de footer-->
-<footer class="footer-clean">
-  <div class="footer-content">
-
-    <h2 class="footer-logo">Mavi <span>Insurance</span></h2>
-
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-whatsapp"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-    </div>
-
-    <div class="footer-columns">
-      <div class="footer-box">
-        <h4>Páginas</h4>
-        <div class="footer-pages">
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="asesores.html">Asesores</a></li>
-          </ul>
-          <ul>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="galeria.html">Galería</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-          </ul>
-        </div>
+  <!--galeria-->
+  <section class="galeria">
+    <div class="contenedor-galeria">
+      <div class="imagen" data-titulo="Mavi Insurance Intagram" data-link="https://www.instagram.com/maviinsurance/">
+        <img src="imagenes/Galeria/1.jpg" alt="Mavi Insurance Intagram" />
       </div>
-
-      <div class="footer-box">
-        <h4>Contacto</h4>
-        <p>+1 (786) 348-7699</p>
-        <p>+1 (930) 234-9660 (Ai)</p>
-        <h5>Reserva y Chat Ai</h5>
-        <div class="chat-icons">
-          <a href="#"><i class="fas fa-sync-alt"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
-        </div>
+      <div class="imagen" data-titulo="Mavi Insurance Intagram" data-link="publicacion2.html">
+        <img src="imagenes/Galeria/7.png" alt="Mavi Insurance Intagram" />
       </div>
+      <div class="imagen" data-titulo="Mavi Insurance Intagram" data-link="publicacion3.html">
+        <img src="imagenes/Galeria/2.jpg" alt="Mavi Insurance Intagram" />
+      </div>
+      <!-- Escalable según sea necesario -->
     </div>
+  </section>
 
-    <p class="footer-copy">© Mavi Insurance. Todos los derechos reservados.</p>
+  <!-- Modal para mostrar imagen ampliada -->
+  <div id="modal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-img" id="imgModal" />
+    <div id="modalTitulo" class="modal-titulo"></div>
+    <a id="btnPublicacion" class="btn-publicacion" href="#" target="_blank">Ir a publicación</a>
   </div>
-</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Sección de footer-->
+  <footer class="footer-clean">
+    <div class="footer-content">
+
+      <h2 class="footer-logo">Mavi <span>Insurance</span></h2>
+
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+      </div>
+
+      <div class="footer-columns">
+        <div class="footer-box">
+          <h4>Páginas</h4>
+          <div class="footer-pages">
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="asesores.html">Asesores</a></li>
+            </ul>
+            <ul>
+              <li><a href="servicios.html">Servicios</a></li>
+              <li><a href="galeria.html">Galería</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-box">
+          <h4>Contacto</h4>
+          <p>+1 (786) 348-7699</p>
+          <p>+1 (930) 234-9660 (Ai)</p>
+          <h5>Reserva y Chat Ai</h5>
+          <div class="chat-icons">
+            <a href="#"><i class="fas fa-sync-alt"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-copy">© Mavi Insurance. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
 
 
 
 </body>
+<script>
+  const modal = document.getElementById("modal");
+  const imgModal = document.getElementById("imgModal");
+  const tituloModal = document.getElementById("modalTitulo");
+  const btnPublicacion = document.getElementById("btnPublicacion");
+  const cerrar = document.querySelector(".cerrar");
+
+  document.querySelectorAll(".imagen img").forEach((img) => {
+    img.addEventListener("click", () => {
+      const parent = img.parentElement;
+      const titulo = parent.getAttribute("data-titulo");
+      const link = parent.getAttribute("data-link");
+
+      modal.style.display = "block";
+      imgModal.src = img.src;
+      tituloModal.textContent = titulo;
+      btnPublicacion.href = link;
+    });
+  });
+
+  cerrar.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  window.onclick = (event) => {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
+
 </html>
