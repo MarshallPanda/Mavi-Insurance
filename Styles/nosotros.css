@@ -248,67 +248,6 @@ body {
   color: #888;
 }
 
-
-/*Style de mision y vision*/
-
-.mision-vision {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.bloque-mision,
-.bloque-vision {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-}
-
-.bloque-mision .imagen,
-.bloque-vision .imagen {
-  flex: 1 1 40%;
-  max-width: 40%;
-}
-
-.bloque-mision .texto,
-.bloque-vision .texto {
-  flex: 1 1 60%;
-  max-width: 60%;
-}
-
-.bloque-mision .imagen img,
-.bloque-vision .imagen img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.texto h2 {
-  margin-bottom: 1rem;
-  color: #2b2b2b;
-}
-
-.texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.nosotros {
-  text-align: center;
-  padding: 3rem 1rem;
-}
-
-.nosotros .etiqueta-vertical {
-  color: #999;
-  font-size: 0.9rem;
-  display: block;
-  margin-bottom: 0.5rem;
-  letter-spacing: 2px;
-}
-
-/* Sección misión y visión mejorada visualmente */
 /* Sección Sobre Nosotros y Servicios */
 .sobre-caracteristicas {
     display: flex;
