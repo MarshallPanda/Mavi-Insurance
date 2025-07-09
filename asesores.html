@@ -51,57 +51,61 @@
 
 
   <!-- Sección de asesores -->
-  <section class="equipo">
-    <div class="asesor"
-      onclick="abrirModal('imagenes/imgNs.png', 'Maria William', 'Especialista en seguros de salud y vida.')">
-      <div class="imagen-asesor">
-        <img src="imagenes/imgNs.png" alt="Maria William">
+
+  <section class="testimonios">
+    <h2>Lo que Dicen Nuestros Clientes</h2>
+    <div class="carrusel-testimonios">
+
+      <div class="testimonio activo">
+        <i class="fas fa-quote-left icono-cita"></i>
+        <p>Gracias al equipo de asesores pude elegir el mejor seguro de vida para mi familia. Siempre atentos y
+          profesionales.</p>
+        <div class="cliente">
+          <img src="imagenes/Mavi Recursos/1-removebg-preview.jpg" alt="Cliente satisfecho">
+          <h4>Ana Rodríguez</h4>
+          <p>Emprendedora</p>
+        </div>
       </div>
-      <h3>Maria William</h3>
-      <p>Product Manager</p>
+
+      <div class="testimonio">
+        <i class="fas fa-quote-left icono-cita"></i>
+        <p>Me ayudaron a entender cada detalle de mi póliza y ahora me siento mucho más seguro. Los recomiendo al 100%.
+        </p>
+        <div class="cliente">
+          <img src="cliente2.png" alt="Cliente satisfecho">
+          <h4>Pedro Martínez</h4>
+          <p>Ingeniero</p>
+        </div>
+      </div>
+
+      <!-- Puedes agregar más testimonios copiando el div .testimonio -->
+
     </div>
 
-    <div class="asesor"
-      onclick="abrirModal('imagenes/imgNs.png', 'Vicente', 'Experto en seguros. Responsable del soporte digital al cliente.')">
-      <div class="imagen-asesor">
-        <img src="imagenes/imgNs.png" alt="Vicente">
-      </div>
-      <h3>Vicente</h3>
-      <p>Senior Developer</p>
+    <div class="controles">
+      <button class="control prev"><i class="fas fa-chevron-left"></i></button>
+      <button class="control next"><i class="fas fa-chevron-right"></i></button>
     </div>
   </section>
 
-  <!-- Modal rectangular con foto y descripción -->
-  <div id="imagenModal" class="modal-rectangular">
-    <div class="modal-contenido-rectangular">
-      <span class="cerrar" onclick="cerrarModal()">&times;</span>
-      <img id="imagenAmpliada" alt="asesor ampliado">
-      <div class="descripcion-modal">
-        <h3 id="nombreAsesor">Nombre del Asesor</h3>
-        <p id="cargoAsesor">Descripción del asesor</p>
-      </div>
-    </div>
-  </div>
 
-  <section class="mensaje-persuasivo">
-    <h2 style="text-align: center; color: #ff69b4; margin-top: 40px;">
-      Confianza, compromiso y atención personalizada
-    </h2>
-    <p style="text-align: center; max-width: 800px; margin: 20px auto; font-size: 18px; color: #444;">
-      En Mavi Insurance creemos que cada persona merece sentirse protegida y respaldada. Por eso, nuestros asesores
-      están capacitados no solo para ayudarte a elegir el mejor seguro, sino para acompañarte en cada paso del camino.
-    </p>
-    <p style="text-align: center; max-width: 800px; margin: 20px auto; font-size: 18px; color: #444;">
-      Ya sea salud, vida o protección familiar, estamos aquí para brindarte respuestas claras, procesos ágiles y una
-      atención cálida que te inspire confianza. ¡No estás sol@, estás con Mavi!
-    </p>
-    <div style="text-align: center; margin-top: 30px;">
-      <a href="contacto.html"
-        style="background-color: #ff69b4; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold;">
-        Agenda tu asesoría ahora
-      </a>
-    </div>
-  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   <!-- Footer -->

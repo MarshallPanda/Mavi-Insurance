@@ -466,3 +466,83 @@ body {
   background-color: #ff69b4;
   border-radius: 2px;
 }
+
+
+/* Estilos para el modal de asesores */
+
+.testimonios {
+    background: #f3f6fc;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+}
+
+.testimonios h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.carrusel-testimonios {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonio {
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.testimonio.activo {
+    display: block;
+}
+
+.icono-cita {
+    font-size: 40px;
+    color: #f594b9;
+    margin-bottom: 20px;
+}
+
+.testimonio p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.cliente img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #4bb6f5;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.cliente h4 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.cliente p {
+    color: #777;
+    font-size: 14px;
+}
+
+.controles {
+    margin-top: 20px;
+}
+
+.control {
+    background: #f594b9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.control:hover {
+    background: #4bb6f5;
+}

@@ -64,6 +64,7 @@ body {
   align-items: center;
   box-shadow: 0 4px 8px var(--color-shadow);
   flex-wrap: wrap;
+
 }
 
 .navbar-bottom ul {
